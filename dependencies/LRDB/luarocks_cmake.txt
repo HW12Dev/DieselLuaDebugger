@@ -1,0 +1,26 @@
+
+
+include_directories("${LUA_INCDIR}")
+LINK_DIRECTORIES("${LUA_LIBDIR}")
+
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/third_party/asio/asio/include")
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/third_party/picojson")
+
+
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/include")
+
+if(NOT MSVC)#-Wall nonsense on MSVC
+  add_definitions("-std=c++11")
+endif(NOT MSVC)
+
+add_library(lrdb_server MODULE src/debug_server_module.cpp)
+IF(LUALIB)
+  TARGET_LINK_LIBRARIES(lrdb_server ${LUALIB})
+ENDIF()
+
+set(CMAKE_MODULE_LINKER_FLAGS ${LIBFLAG})
+
+
+if (CMAKE_INSTALL_PREFIX)
+  install(TARGETS lrdb_server DESTINATION "${CMAKE_INSTALL_PREFIX}/lib")
+endif(CMAKE_INSTALL_PREFIX)

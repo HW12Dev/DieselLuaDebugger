@@ -1,0 +1,3 @@
+[submodule "dependencies/luajit-decompiler"]
+	path = dependencies/luajit-decompiler
+	url = https://github.com/HW12Dev/luajit-decompiler-v2

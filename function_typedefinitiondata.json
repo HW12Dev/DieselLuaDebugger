@@ -1,0 +1,248 @@
+[
+{
+  "name": "lua_setupvalue",
+  "return_type": "const char*",
+  "arguments": "lua_State* L, int funcindex, int n"
+},
+{
+  "name": "lua_getinfo",
+  "return_type": "int",
+  "arguments": "lua_State* L, const char* what, lua_Debug* ar"
+},
+{
+  "name": "lua_topointer",
+  "return_type": "const void*",
+  "arguments": "lua_State* L, int idx"
+},
+{
+  "name": "lua_getfenv",
+  "return_type": "void",
+  "arguments": "lua_State* L, int idx"
+},
+{
+  "name": "lua_setfenv",
+  "return_type": "int",
+  "arguments": "lua_State* L, int idx"
+},
+{
+  "name": "lua_gettop",
+  "return_type": "int",
+  "arguments": "lua_State* L"
+},
+{
+  "name": "lua_settop",
+  "return_type": "void",
+  "arguments": "lua_State* L, int idx"
+},
+{
+  "name": "lua_pushvalue",
+  "return_type": "void",
+  "arguments": "lua_State* L, int idx"
+},
+{
+  "name": "lua_type",
+  "return_type": "int",
+  "arguments": "lua_State* L, int idx"
+},
+{
+  "name": "lua_typename",
+  "return_type": "const char*",
+  "arguments": "lua_State* L, int tp"
+},
+{
+  "name": "lua_tonumber",
+  "return_type": "lua_Number",
+  "arguments": "lua_State* L, int idx"
+},
+{
+  "name": "lua_toboolean",
+  "return_type": "int",
+  "arguments": "lua_State* L, int idx"
+},
+{
+  "name": "lua_tolstring",
+  "return_type": "const char*",
+  "arguments": "lua_State* L, int idx, size_t* len"
+},
+{
+  "name": "lua_objlen",
+  "return_type": "size_t",
+  "arguments": "lua_State* L, int idx"
+},
+{
+  "name": "lua_touserdata",
+  "return_type": "void*",
+  "arguments": "lua_State* L, int idx"
+},
+{
+  "name": "lua_pushnil",
+  "return_type": "void",
+  "arguments": "lua_State* L"
+},
+{
+  "name": "lua_pushnumber",
+  "return_type": "void",
+  "arguments": "lua_State* L, lua_Number n"
+},
+{
+  "name": "lua_pushlstring",
+  "return_type": "void",
+  "arguments": "lua_State* L, const char* s, size_t l"
+},
+{
+  "name": "lua_pushboolean",
+  "return_type": "void",
+  "arguments": "lua_State* L, int b"
+},
+{
+  "name": "lua_pushlightuserdata",
+  "return_type": "void",
+  "arguments": "lua_State* L, void* p"
+},
+{
+  "name": "lua_rawget",
+  "return_type": "void",
+  "arguments": "lua_State* L, int idx"
+},
+{
+  "name": "lua_createtable",
+  "return_type": "void",
+  "arguments": "lua_State* L, int narr, int nrec"
+},
+{
+  "name": "lua_setfield",
+  "return_type": "void",
+  "arguments": "lua_State* L, int idx, const char* k"
+},
+{
+  "name": "lua_rawset",
+  "return_type": "void",
+  "arguments": "lua_State* L, int idx"
+},
+{
+  "name": "lua_rawseti",
+  "return_type": "void",
+  "arguments": "lua_State* L, int idx, int n"
+},
+{
+  "name": "lua_setmetatable",
+  "return_type": "int",
+  "arguments": "lua_State* L, int objindex"
+},
+{
+  "name": "lua_pcall",
+  "return_type": "int",
+  "arguments": "lua_State* L, int nargs, int nresults, int errfunc"
+},
+{
+  "name": "lua_next",
+  "return_type": "int",
+  "arguments": "lua_State* L, int idx"
+},
+{
+  "name": "luaL_callmeta",
+  "return_type": "int",
+  "arguments": "lua_State* L, int obj, const char* e"
+},
+{
+  "name": "luaL_loadstring",
+  "return_type": "int",
+  "arguments": "lua_State* L, const char* s"
+},
+{
+  "name": "lua_loadx",
+  "return_type": "int",
+  "arguments": "lua_State* L, lua_Reader reader, void* data, const char* chunkname, const char* mode"
+},
+{
+  "name": "index2adr",
+  "return_type": "TValue*",
+  "arguments": "lua_State* L, int idx"
+},
+{
+  "name": "luaL_getmetafield",
+  "return_type": "int",
+  "arguments": "lua_State* L, int obj, const char* e"
+},
+{
+  "name": "lua_getfield",
+  "return_type": "void",
+  "arguments": "lua_State* L, int idx, const char* k"
+},
+{
+  "name": "lua_getstack",
+  "return_type": "int",
+  "arguments": "lua_State* L, int level, lua_Debug* ar"
+},
+{
+  "name": "lua_getlocal",
+  "return_type": "const char*",
+  "arguments": "lua_State* L, const lua_Debug* ar, int n"
+},
+{
+  "name": "lua_setlocal",
+  "return_type": "const char*",
+  "arguments": "lua_State* L, const lua_Debug* ar, int n"
+},
+{
+  "name": "lua_getupvalue",
+  "return_type": "const char*",
+  "arguments": "lua_State* L, int funcindex, int n"
+},
+{
+  "name": "lua_sethook",
+  "return_type": "int",
+  "arguments": "lua_State* L, lua_Hook func, int mask, int count"
+},
+{
+  "name": "lua_pushcclosure",
+  "return_type": "void",
+  "arguments": "lua_State* L, lua_CFunction fn, int n"
+},
+{
+  "name": "lua_pushstring",
+  "return_type": "void",
+  "arguments": "lua_State* L, const char* s"
+},
+{
+  "name": "lj_state_growstack",
+  "return_type": "void",
+  "arguments": "lua_State* L, MSize need"
+},
+
+{
+  "name": "lj_debug_getinfo",
+  "return_type": "int",
+  "arguments": "lua_State *L, const char *what, lj_Debug *ar, int ext"
+},
+{
+  "name": "lj_obj_ptr",
+  "return_type": "const void*",
+  "arguments": "global_State* g, cTValue* o"
+},
+{
+  "name": "lj_vm_call",
+  "return_type": "void",
+  "arguments": "lua_State *L, TValue *base, int nres1"
+},
+{
+  "name": "lua_getmetatable",
+  "return_type": "int",
+  "arguments": "lua_State *L, int idx"
+},
+{
+  "name": "lj_tab_getstr",
+  "return_type": "cTValue*",
+  "arguments": "GCtab *t, const GCstr *key"
+},
+{
+  "name": "lj_str_new",
+  "return_type": "GCstr*",
+  "arguments": "lua_State *L, const char *str, size_t len"
+},
+{
+  "name": "resizestack",
+  "return_type": "void",
+  "arguments": "lua_State* L, MSize n"
+}
+]

@@ -1,0 +1,14 @@
+vsxmake2022
+.vscode
+.xmake
+*.obj
+*.lib
+dependencies/luajit/luajit/src/*.pdb
+dependencies/luajit/luajit/src/*.exe
+dependencies/luajit/luajit/src/*.exp
+dependencies/luajit/luajit/src/*.dll
+staging
+
+src/generated_lua_definitions.txt
+src/generated_game_information.h
+./luajit
